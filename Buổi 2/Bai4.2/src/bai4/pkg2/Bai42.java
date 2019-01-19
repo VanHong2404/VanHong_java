@@ -19,13 +19,14 @@ public class Bai42 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a, min = 1  , max= 0 , temp ;
+        int a , temp ;
         Scanner sc = new Scanner (System.in);
   
       do
         {
             a = sc.nextInt();
                temp = a;
+          int min = 1  , max= 0;
             if ( max < temp)
             {
                 max = a;
