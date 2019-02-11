@@ -30,10 +30,7 @@ public class Bai82 {
         System.out.println("Nhập vào x=");
         int x= nhap.nextInt();
          float sinx=0;
-         float temp=0;
-         //float gt=1;
-         //temp=( x -(float)Math.pow((-1), n)*(float) ((Math.pow(x, 2*n+1))/(giai_thua(2*n+1))));
-        // System.out.println("kq:"+temp);
+         float temp=0;         
         for(int i=1;i<=n;i++)
         {
             sinx=sinx+ (float)Math.pow((-1), i)*(float) ((Math.pow(x, 2*i+1))/(giai_thua(2*i+1)));
