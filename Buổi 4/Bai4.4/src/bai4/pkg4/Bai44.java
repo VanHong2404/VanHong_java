@@ -17,42 +17,55 @@ public class Bai44 {
     }
 
     public Bai44(int x) {
-        if(isSoNguyento(x))
-        {
-            this.a=x;
-            System.out.println(a);
-        }else{
-            System.out.println("Không lưu trữ");
+        int check=1;
+        if(x==0||x==1){
+            check=0;
         }
+        for(int i=2;i<=Math.sqrt(x);i++){
+            if(x%i==0) check=0;
+        }
+        if(check==1) this.a=x;
+        else System.out.println(x+" KHÔNG phải là số nguyên tố");
     }
-    public boolean isSoNguyento(int x)
-    {
-        for(int i=0;i< Math.sqrt(x/2);i++)
-        {
-            if(x%2==0)
-                return false;
-            else
-                return true;
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        if(isSoNguyenTo(a)==true){
+            this.a=a;
         }
-        
-        return false;
+        System.out.println("Không set");
+    }
+    public boolean isSoNguyenTo(int x) {
+        if(x==0||x==1){
+            return false;
+        }
+        for(int i=2;i<=Math.sqrt(x);i++){
+            if(x%i==0) return false;
+        }
+        return true;
     }
     public int timSoNguyenToTiepTheo(){
-        
-        int i;
-        
-        for ( i = 2; i <this.a; i++) {
-            if(isSoNguyento(i))
-            {
-                System.out.println("Kết quả:"+i);
+        Scanner input=new Scanner(System.in);
+        System.out.println("Nhập a: ");
+        a=input.nextInt();
+        if(isSoNguyenTo(a)==true){
+            for (int i = a+1; ; i++) {
+                if(isSoNguyenTo(i)==true) {
+                    return i;
+                }
+                
             }
         }
+        else System.out.println("số a không phải số nguyên tố");
         
-        return i;
+        return 0;
     }
-    
+}
     public static void main(String[] args) {
         Bai44 snt = new Bai44(3);
         snt.timSoNguyenToTiepTheo();
-    }
-}
+            }
+        }
