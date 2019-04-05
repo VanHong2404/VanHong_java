@@ -5,13 +5,16 @@
  */
 package bai12.pkg4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Hong Beo
  */
-public class Polygon {
+public abstract class Polygon {
      private int length;
     private int width;
+    Scanner sc = new Scanner(System.in);
 
     public Polygon() {
     }
@@ -20,8 +23,6 @@ public class Polygon {
         this.length = length;
         this.width = width;
     }
-
-  
 
     public int getLength() {
         return length;
@@ -39,12 +40,9 @@ public class Polygon {
         this.width = width;
     }
     
-    public double perimeter(){//chu vi
-        return 0;
-    }
-    public double acreage(){//diện tích
-        return 0;
-    }
+    
+    public abstract double perimeter();
+    public abstract double acreage();
 }
     
 

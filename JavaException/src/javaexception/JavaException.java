@@ -3,23 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bai12.pkg4;
+package javaexception;
 
 /**
  *
  * @author Hong Beo
  */
-public class Rectangle extends Parallelogram {
+public class JavaException {
 
-    public Rectangle() {      
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
-  
-    public Rectangle(int height, int length, int width) {
-        super(height, length, width);
-    }
-
-    
-     
-    
     
 }

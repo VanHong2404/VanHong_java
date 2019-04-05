@@ -9,7 +9,7 @@ package bai12.pkg4;
  *
  * @author Hong Beo
  */
-public class Parallelogram extends Polygon{
+public class Parallelogram extends Polygon{   // nếu xóa override đi mà đnag dùng ab thì chắc chắn phải có ghi đè
         private int height;
 
     public Parallelogram() {
@@ -20,14 +20,17 @@ public class Parallelogram extends Polygon{
         super(length, width);
         this.height = height;
     }
-
-   @Override
-    public double perimeter(){
-        return (super.getLength()+super.getWidth())*2;
-    }
+    
+      
     @Override
-    public double acreage(){
-        return super.getLength()*height;
+    public double perimeter() {
+        return (super.getLength()+super.getWidth())*2;
+    }    
+
+    @Override
+    public double acreage() {
+        return super.getLength()*height; 
     }
-   
 }
+
+
