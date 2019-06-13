@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+#me {
+	background: #FECFFD;
+	color: #FF3399
+}
+#nen {
+	background: #FFFFCC;
+	text-align: center;
+}
+
+
+.nenb21 {
+	background-image: url(anh/anh0.jpg); 
+	background-size:50%;
+	background-position: center;
+	background-color: #A06D21;
+	
+}
+
+#nenb4 {
+	background: #339999;
+	color: white;
+	
+}
+#nen5 {
+	background-color: #CCCCCC;
+	color: #0000CC;
+	text-align: center;
+}
+#nen6 {
+	background-color: orange;
+	color: white;
+	font-size: 30px;
+	text-align:right;
+}
+#nen7Trai {
+	width: 20%;
+	height: 80%;
+	float: left;
+}
+#nen7phai {
+	width: 80%;
+	float: right;
+	
+}
+#chan{
+	background-color: pink;
+	width: 70%;
+	float: right;
+}
