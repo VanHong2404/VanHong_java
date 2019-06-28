@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .has-error {
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td><label>Name: </label></td>
+            <td>
+                <input id="txtName" type="text">
+                <span class="has-error" id="nameErr"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email: </label></td>
+            <td>
+                <input id="txtEmail" type="text">
+                <span class="has-error" id="emailErr"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Website: </label></td>
+            <td>
+                <input id="txtSite" type="text">
+                <span class="has-error" id="siteErr"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Message: </label></td>
+            <td>
+                <textarea name="" id="txtMess" cols="30" rows="5"></textarea>
+                <span class="has-error" id="messErr"></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="submit()">Submit</button></td>
+        </tr>
+    </table>
+    
+    <script>
+        var nameElement = document.getElementById('txtName');
+        var emailElement = document.getElementById('txtEmail');
+        var siteElement = document.getElementById('txtSite');
+        var messElement = document.getElementById('txtMess');
+        var nameErr = document.getElementById('nameErr');
+        var emailErr = document.getElementById('emailErr');
+        var siteErr = document.getElementById('siteErr');
+        var messErr = document.getElementById('messErr');
+        function submit() {
+            var name = nameElement.value;
+            var email = emailElement.value;
+            var site = siteElement.value;
+            var mess = messElement.value;
+            if (name == "") {
+                nameErr.innerText = "This field is required";
+				nameElement.style.border = "1px solid red";
+               
+            } else {
+                nameErr.innerText = "";               
+         
+            }
+			
+			
+            if (email == "") {
+                emailErr.innerText = "This field is required";
+				emailElement.style.border = "1px solid red";
+                
+                
+            } else {
+                emailErr.innerText = "";
+                
+            }
+			
+			
+			
+            if (site == "") {
+                siteErr.innerText = "This field is required";
+                siteElement.style.border = "1px solid red";
+            }  else {
+                siteErr.innerText = "";
+               
+            }
+			
+			
+            if (mess == "") {
+                messErr.innerText = "This field is required";
+                messElement.style.border = "1px solid red";
+            }  else {
+                messErr.innerText = "";
+               
+            }
+        }
+    </script>
+</body>
+</html>
