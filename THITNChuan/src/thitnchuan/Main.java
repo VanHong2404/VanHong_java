@@ -33,11 +33,20 @@ public class Main {
                 System.out.println("LOGIN SUCCESS! PRESS ANY KEY TO START QUIZ");
                 input.nextLine();
                 System.out.println("---------------");
-                if(sm.check_student_questions(s)==true){ // kiem tra xem da lam bai chua // roi
+    // kiem tra xem da lam bai chua // roi                  
+                if(sm.check_student_questions(s)==true){ 
+    // Neu lam roi co muon xem lai dap an k
+                    System.out.println("Do you want to see answer? Y/N");
+                    String check1 =input.nextLine();
+    // Neu da lam roi co muon lam lai k,
+                     if(check1.toLowerCase().equals("y")){ 
+                       sm.Detail_student_questions(s);
+                     }
                     System.out.println("You did the test. Do you want to do it again? Y / N");
                     System.out.println("Your choice > ");
                     String check =input.nextLine();
-                    if(check.toLowerCase().equals("y")){ // neu da lam roi chon Y thi xoa toan bo dap an va bat dau lam lai
+    // neu da lam roi chon Y thi xoa toan bo dap an va bat dau lam lai               
+                    if(check.toLowerCase().equals("y")){ 
                        sm.delete_student_questions(s);
                 QuestionManager qm = new QuestionManager();
                 List<Question> questions = qm.getQuestions(); //lấy ra danh sách
